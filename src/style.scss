@@ -1,0 +1,97 @@
+body {
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    background-image: url('./assets/giphy.gif');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.stage{
+    display: none;
+}
+.stage.active{
+    display: block;
+}
+
+.opening {
+    font-size: 30px;
+    &.active{
+        display: inline-block;
+    }
+}
+
+.stage1{
+    padding: 50px;
+    text-align: center;
+}
+
+.box__amanda{
+    margin: 30px;
+}
+
+.img_amanda{
+    width: 300px;
+}
+
+.span__name{
+    font-size: 30px;
+}
+
+.box__password{
+    font-size: 40px;
+    line-height: 50px;
+    vertical-align: middle;
+    margin: 20px;
+}
+
+.box__password>span{
+    vertical-align: text-bottom;
+}
+
+.box__password>input{
+    box-sizing: border-box;
+    width: 100px;
+    line-height: 50px;
+    font-size: 40px;
+    text-align: center; 
+    border: 3px solid black;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}
+
+.box__password>input.err{
+    border: 3px solid red;
+}
+
+.box__password>input.right{
+    border: 3px solid green;
+}
+
+.btn_opening{
+    cursor: pointer;
+    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    bottom: 50px;
+}
